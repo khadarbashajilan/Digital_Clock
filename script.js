@@ -6,7 +6,6 @@ let vol = document.getElementById('vol');
 
 if (window.innerWidth < 932) {
     alert("Your screen size is too small for the best experience!");
-    console.prompt("Please use a device with a screen width of at least 932px for the best experience.");
 }
 
 vol.addEventListener('click', () => {
