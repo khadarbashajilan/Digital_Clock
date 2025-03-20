@@ -28,10 +28,12 @@ s.innerText = secs;
 ,1000);
 
 
-aud.currentTime = 2; // Set playback position to 2 seconds
-aud.volume=1.0;
-aud.play();
-document.addEventListener("load", () => {
-    aud.muted = false; // Unmute after user interaction
-    aud.play().catch(err => console.warn("Autoplay blocked:", err)); // Catch autoplay errors
-}, { once: true }); // Only run once    
+document.addEventListener("DOMContentLoaded", () => {
+    let aud = document.getElementsByTagName("audio")[0];
+    aud.currentTime = 2;
+    aud.volume = 1.0;
+    
+    aud.play().catch(err => {
+        console.warn("Autoplay blocked:", err);
+    });
+}, { once: true }); // Ensures it runs only once
