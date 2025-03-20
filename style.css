@@ -6,7 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(./src/80418-3840x2160-desktop-4k-the-last-of-us-game-wallpaper-photo.jpg);
+    background-image: url(./public/80418-3840x2160-desktop-4k-the-last-of-us-game-wallpaper-photo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
