@@ -31,3 +31,7 @@ s.innerText = secs;
 aud.currentTime = 2; // Set playback position to 2 seconds
 aud.play(); // Play audio from the new position
 aud.volume=1;
+
+document.addEventListener("click", () => {
+    aud.play().catch(error => console.warn("Autoplay blocked:", error));
+}, { once: true }); // Runs only once
