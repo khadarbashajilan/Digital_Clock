@@ -33,5 +33,7 @@ aud.play(); // Play audio from the new position
 aud.volume=1;
 
 document.addEventListener("click", () => {
-    aud.play().catch(error => console.warn("Autoplay blocked:", error));
-}, { once: true }); // Runs only once
+    let aud = document.getElementById("tickSound");
+    aud.muted = false; // Unmute after user interaction
+    aud.play();
+}, { once: true });
