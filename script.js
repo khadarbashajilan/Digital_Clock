@@ -31,7 +31,7 @@ s.innerText = secs;
 aud.currentTime = 2; // Set playback position to 2 seconds
 aud.volume=1.0;
 aud.play();
-document.addEventListener("click", () => {
+document.addEventListener("load", () => {
     aud.muted = false; // Unmute after user interaction
     aud.play().catch(err => console.warn("Autoplay blocked:", err)); // Catch autoplay errors
 }, { once: true }); // Only run once    
