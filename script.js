@@ -10,7 +10,7 @@ if (window.innerWidth < 932) {
 }
 
 vol.addEventListener('click', () => {
-    aud.volume=aud.volume ===0?1:0;
+    aud.volume=aud.volume ===0?1.0:0.0;
     vol.classList.toggle("fa-volume-up");
     vol.classList.toggle("fa-volume-mute");    
 
@@ -29,9 +29,9 @@ s.innerText = secs;
 
 
 aud.currentTime = 2; // Set playback position to 2 seconds
-aud.volume=1;
+aud.volume=1.0;
 
 document.addEventListener("click", () => {
     aud.muted = false; // Unmute after user interaction
-    aud.play();
-}, { once: true });
+    aud.play().catch(err => console.warn("Autoplay blocked:", err)); // Catch autoplay errors
+}, { once: true }); // Only run once    
