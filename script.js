@@ -29,11 +29,9 @@ s.innerText = secs;
 
 
 aud.currentTime = 2; // Set playback position to 2 seconds
-aud.play(); // Play audio from the new position
 aud.volume=1;
 
 document.addEventListener("click", () => {
-    let aud = document.getElementById("tickSound");
     aud.muted = false; // Unmute after user interaction
     aud.play();
 }, { once: true });
