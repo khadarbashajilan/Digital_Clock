@@ -4,14 +4,12 @@ let s = document.getElementById('secs');
 let aud = document.getElementsByTagName("audio")[0];
 let vol = document.getElementById('vol');
 aud.volume=0.0;
-aud.muted=true;
 if (window.innerWidth < 932) {
     alert("Your screen size is too small for the best experience!");
 }
 
 vol.addEventListener('click', () => {
     aud.volume=aud.volume ===0?1.0:0.0;
-    aud.muted=aud.muted ===true?false:true;
     vol.classList.toggle("fa-volume-up");
     vol.classList.toggle("fa-volume-mute");    
 
